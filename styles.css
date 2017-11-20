@@ -253,6 +253,15 @@ html, body {
 }
 #success_message{ display: none;}
 
+*/ Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
 /* Style the submit button */
 input[type=submit] {
   background-color: #4CAF50;
