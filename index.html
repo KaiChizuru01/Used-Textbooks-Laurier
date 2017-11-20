@@ -57,17 +57,14 @@
                 document.getElementById("subcategory").length = 0;
                 switch (listindex)
                 {
-                    case "Php" :
-                        document.getElementById("subcategory").options[0]=new Option("Please select framework","");
-                        document.getElementById("subcategory").options[1]=new Option("Cakephp","Cakephp");
-                        document.getElementById("subcategory").options[2]=new Option("Wordpress","Wordpress");
-                        document.getElementById("subcategory").options[3]=new Option("Codeigniter","Codeigniter");
-                        document.getElementById("subcategory").options[4]=new Option("Joomla","Joomla");
-                        document.getElementById("subcategory").options[5]=new Option("Magento","Magento");
+                    case "Fall 2017" :
+                        document.getElementById("subcategory").options[0]=new Option("Please select term","");
+                        document.getElementById("subcategory").options[1]=new Option("Please select term","");
+
                         break;
                     
                     case "Java" :
-                        document.getElementById("subcategory").options[0]=new Option("Please select framework","");
+                        document.getElementById("subcategory").options[0]=new Option("Please select term","");
                         document.getElementById("subcategory").options[1]=new Option("Strauts","Strauts");
                         document.getElementById("subcategory").options[2]=new Option("Hibernate","Hibernate");
                         break;
@@ -110,31 +107,52 @@
         </div>
       </header>
       <body>
-        <div class="category_div" id="category_div">Please specify language:
-            <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
-                <option value="">Select Language</option>
-                <option value="Php">Php</option>
-                <option value="Java">Java</option>
-                <option value="Javascript">Javascript</option>
-                <option value="Dotnet">Dotnet</option>
-            </select>
-        </div>
-        <div class="sub_category_div" id="sub_category_div">Please select framework:
-            <script type="text/javascript" language="JavaScript">
-                document.write('<select name="subcategory" id="subcategory"><option value="">Please select framework</option></select>')
-            </script>
-            <noscript>
-                <select name="subcategory" id="subcategory" >
-                    <option value="">Please select framework</option>
-                </select>
-            </noscript>
-        </div>
-    </body>
-          
-        <footer class="mdl-mega-footer">
-          <div class="mdl-mega-footer--middle-section">
-            <div class="mdl-mega-footer--drop-down-section">
-              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+        <form id="formname" name="formname" method="post" action="submitform.asp" >
+		<table width="50%" border="0" cellspacing="0" cellpadding="5">
+			<tr>
+				<td width="41%" align="right" valign="middle">Category1 :</td>
+				<td width="59%" align="left" valign="middle">
+					<select name="category1" id="category1">
+						<option value="">Select Category1</option>
+						<option value="home_ware">Home Ware</option>
+						<option value="education">Education</option>
+						<option value="books">Books</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right" valign="middle">Category2 :</td>
+				<td align="left" valign="middle">
+					<select disabled="disabled" id="category2" name="category2">
+						<option value>Select Category2</option>
+						<!-- Home Ware -->
+						<option rel="home_ware" value="air-conditioners_coolers">Air-Conditioners/Coolers</option>
+                        <option rel="home_ware" value="audio-video">Audio/Video</option>
+						<option rel="home_ware" value="beddings">Beddings</option>
+						<option rel="home_ware" value="camera">Camera</option>
+						<option rel="home_ware" value="cell-phones">Cell Phones</option>
+						<!-- Education -->
+						<option rel="Education" value="Colleges">Colleges</option>
+						<option rel="Education" value="Institutes">Institutes</option>
+						<option rel="Education" value="Schools">Schools</option>
+						<option rel="Education" value="Tuitions">Tuitions</option>
+						<option rel="Education" value="Universities">Universities</option>
+						<!-- Books -->
+						<option rel="Books" value="College Books">College Books</option>
+						<option rel="Books" value="Engineering">Engineering</option>
+						<option rel="Books" value="Magazines">Magazines</option>
+						<option rel="Books" value="Medicine">Medicine</option>
+						<option rel="Books" value="References">References</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+	</form>
+      </body>
+      <footer class="mdl-mega-footer">
+        <div class="mdl-mega-footer--middle-section">
+          <div class="mdl-mega-footer--drop-down-section">
+            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
               <h1 class="mdl-mega-footer--heading">Features</h1>
               <ul class="mdl-mega-footer--link-list">
                 <li><a href="#">About</a></li>
