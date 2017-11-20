@@ -307,3 +307,19 @@ input[type=submit] {
     margin-top: 0;
   }
 }
+
+#department option{
+    display:none;
+}
+
+#department option.label{
+    display:block;
+}
+
+#courses optgroup{
+    display:none;
+}
+
+#courses optgroup.label{
+    display:block;
+}
