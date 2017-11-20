@@ -1,5 +1,5 @@
 <?php
-if(lisset($_POST['submit']))
+if(isset($_POST['submit']))
 {
   //This page should not be accessed directly. Need to submit the form.
   echo "error; you need to submit the form!";
@@ -15,13 +15,16 @@ if(empty($name)||empty($visitor_email))
   exit;
 }
 
+$to = "nguy2930@mylaurier.ca";//<== Put your email here
+                       
+
 $email_from = 'nguy2930@mylaurier.ca';//<== Put your email here
 $email_subject = "Question or Concern about the used textbook website";
 $email_body = "You have received a new message from the user $name. \n".
   "email address: $visitor_email\n".
   "Here is the message:\n $message".
   
-  $to = "nguy2930@mylaurier.ca";//<== Put your email here
+  
   $headers = "From: $email_from \r\n";
   
   //Send the email!
