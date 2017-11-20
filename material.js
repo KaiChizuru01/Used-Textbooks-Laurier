@@ -3988,7 +3988,7 @@ $(function(){
     
     var $cat = $("#term"),
         $subcat = $("#faculty");
-        $subcat = $("#department");
+        $subcat2 = $("#department");
     
     $cat.on("change",function(){
         var _rel = $(this).val();
