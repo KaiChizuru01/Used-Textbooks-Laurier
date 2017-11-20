@@ -76,39 +76,92 @@
         <form id="formname" name="formname" method="post" action="submitform.asp" >
 		<table width="50%" border="0" cellspacing="0" cellpadding="5">
 			<tr>
-				<td width="41%" align="right" valign="middle">Category1 :</td>
+				<td width="41%" align="right" valign="middle">Term:</td>
 				<td width="59%" align="left" valign="middle">
 					<select name="category1" id="category1">
-						<option value="">Select Category1</option>
-						<option value="home_ware">Home Ware</option>
-						<option value="education">Education</option>
-						<option value="books">Books</option>
+						<option value="">Select term</option>
+						<option value="Fall_2017">Fall 2017</option>
 					</select>
 				</td>
-			</tr>
-			<tr>
-				<td align="right" valign="middle">Category2 :</td>
+				<td align="right" valign="middle">Faculty:</td>
 				<td align="left" valign="middle">
-					<select disabled="disabled" id="category2" name="category2">
-						<option value>Select Category2</option>
-						<!-- Home Ware -->
-						<option rel="home_ware" value="air-conditioners_coolers">Air-Conditioners/Coolers</option>
-                        <option rel="home_ware" value="audio-video">Audio/Video</option>
-						<option rel="home_ware" value="beddings">Beddings</option>
-						<option rel="home_ware" value="camera">Camera</option>
-						<option rel="home_ware" value="cell-phones">Cell Phones</option>
+					<select disabled="disabled" id="faculty" name="faculty">
+						<option value>Select faculty</option>
+						<!-- Faculty -->
+						<option rel="Fall_2017" value="arts">Faculty of Arts</option>
+                        			<option rel="Fall_2017" value="education">Faculty of Education</option>
+						<option rel="Fall_2017" value="human">Faculty of Human and Social Sciences</option>
+						<option rel="Fall_2017" value="liberal_arts">Faculty of Liberal Arts</option>
+						<option rel="Fall_2017" value="business">Lazaridis School of Business and Economics</option>
+						<option rel="Fall_2017" value="music">Faculty of Music</option>
+						<option rel="Fall_2017" value="science">Faculty of Science</option>
+						<option rel="Fall_2017" value="social_work">Lyle S. Hallman Faculty Social Work</option>
+						<option rel="Fall_2017" value="seminary">Waterloo Lutheran Seminary</option>
+					</select>
+				</td>
+				<td align="right" valign="middle">Department:</td>
+				<td align="left" valign="middle">
+					<select disabled="disabled" id="department" name="department">
+						<option value>Select department</option>
+						<!-- Arts -->
+						<option rel="arts" value="ancient_studies">Ancient Studies</option>
+                        			<option rel="arts" value="anthro">Anthropology</option>
+						<option rel="arts" value="archaeology">Archaeology and Heritage Studies</option>
+						<option rel="arts" value="communications">Communication Studies</option>
+						<option rel="arts" value="cast">Cultural Analysis and Social Theory(CAST)</option>
+						<option rel="arts" value="cultural">Cultural Studies</option>
+						<option rel="arts" value="a_english">English and Film Studies</option>
+						<option rel="arts" value="Geography">Geography and Environmental Studies</option>
+						<option rel="arts" value="global">Global Studies</option>
+						<option rel="arts" value="a_history">History</option>
+						<option rel="arts" value="languages">Languages and Literatures</option>
+						<option rel="arts" value="medieval">Medieval and Medievalism Studies</option>
+						<option rel="arts" value="north_american">North American Studies</option>
+						<option rel="arts" value="philosophy">Philosophy</option>
+						<option rel="arts" value="polisci">Political Science</option>
+						<option rel="arts" value="religion">Religion and Culture</option>
+						<option rel="arts" value="sociology">Sociology</option>
+						<option rel="arts" value="women">Women and Gender Studies</option>
 						<!-- Education -->
-						<option rel="Education" value="Colleges">Colleges</option>
-						<option rel="Education" value="Institutes">Institutes</option>
-						<option rel="Education" value="Schools">Schools</option>
-						<option rel="Education" value="Tuitions">Tuitions</option>
-						<option rel="Education" value="Universities">Universities</option>
-						<!-- Books -->
-						<option rel="Books" value="College Books">College Books</option>
-						<option rel="Books" value="Engineering">Engineering</option>
-						<option rel="Books" value="Magazines">Magazines</option>
-						<option rel="Books" value="Medicine">Medicine</option>
-						<option rel="Books" value="References">References</option>
+						<option rel="education" value="edu_courses">Courses</option>
+						<!-- Human and Social Sciences -->
+						<option rel="human" value="community_health">Community Health</option>
+						<option rel="human" value="criminology">Criminology</option>
+						<option rel="human" value="game_design">Game Design and Development</option>
+						<option rel="human" value="health_admin">Health Administration</option>
+						<option rel="human" value="leadership">Leadership</option>
+						<option rel="human" value="policing">Policingh</option>
+						<option rel="human" value="h_psych">Psychology</option>
+						<option rel="human" value="public_health">Public Health</option>
+						<!-- Liberal Arts -->
+						<option rel="liberal_arts" value="digi_media">Digital Media and Journalism</option>
+						<option rel="liberal_arts" value="la_english">English</option>
+						<option rel="liberal_arts" value="la_history">History</option>
+						<option rel="liberal_arts" value="human_rights">Human Rights and Human Diversity</option>
+						<option rel="liberal_arts" value="indigenous">Indigenous Studies</option>
+						<option rel="liberal_arts" value="law">Law and Society</option>
+						<option rel="liberal_arts" value="social_enviro_justice">Social and Environmental Justice</option>
+						<option rel="liberal_arts" value="social_justice">Social Justice and Community Engagement</option>
+						<option rel="liberal_arts" value="user">User Experience Design</option>
+						<option rel="liberal_arts" value="youth">Youth and Children's Studies</option>
+						<!-- Business -->
+						<option rel="business" value="business">Business</option>
+						<option rel="business" value="economics">Economics</option>
+						<option rel="business" value="btm">Business Techology Management (BTM)</option>
+						<!-- Music -->
+						<option rel="music" value="music_courses">Courses</option>
+						<!-- Science -->
+						<option rel="science" value="water">Applied Water Science</option>
+						<option rel="science" value="bio">Biology</option>
+						<option rel="science" value="chem"Chemistry and Biochemistry</option>
+						<option rel="science" value="environment"Environmental Science</option>
+						<option rel="science" value="health"Health Sciences</option>
+						<option rel="science" value="kin"Kinesiology and Physical Education</option>
+						<option rel="science" value="math"Mathematics</option>
+						<option rel="science" value="physics"Physics and Computer Science</option>
+						<option rel="science" value="s_psych"Psychology</option>
+						<!-- Seminary -->
+						<option rel="seminary" value="christian">Christian Studies and Global Citizenship</option>
 					</select>
 				</td>
 			</tr>
