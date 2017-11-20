@@ -253,10 +253,17 @@ html, body {
 }
 #success_message{ display: none;}
 
-#category2 option{
+#faculty option{
     display:none;
 }
 
-#category2 option.label{
+#faculty option.label{
+    display:block;
+}
+#department option{
+    display:none;
+}
+
+#department option.label{
     display:block;
 }
