@@ -252,3 +252,11 @@ html, body {
   z-index: 99;
 }
 #success_message{ display: none;}
+
+#category2 option{
+    display:none;
+}
+
+#category2 option.label{
+    display:block;
+}
