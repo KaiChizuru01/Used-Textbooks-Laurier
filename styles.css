@@ -253,20 +253,6 @@ html, body {
 }
 #success_message{ display: none;}
 
-#faculty option{
-    display:none;
-}
-
-#faculty option.label{
-    display:block;
-}
-#department option{
-    display:none;
-}
-
-#department option.label{
-    display:block;
-}
 /* Style the submit button */
 input[type=submit] {
   background-color: #4CAF50;
