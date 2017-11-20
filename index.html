@@ -100,37 +100,21 @@ Course List
 </div>
 </div>
 </div>
-<div class='table-wrapper'>
-<div id='utk-login'>
-<div class='text'>
-Retrieve Your Custom Booklist Using Network Login:
-</div>
-<iframe src='https://web.wlu.ca/custombooklist' style='height: 70px; margin-top: 20px;'></iframe>
-<div class='text'>
-Compare our prices with Amazon! </br>
-Our new “Compare” tool does just that – let us do the work for you!
-<div class='small'>
-Compare integrates with your Custom Booklist to provide a book by book pricing comparison with Amazon in real time. You can save valuable time searching for the best price for your course materials and make your buying decision directly from our website.
-</div>
-</div>
-</div>
-<!-- / TODO: Remove -size user.setting from v3? -->
-<!-- / - size = locale_user.setting("pc.settings.course_selector.font_size") -->
-<div id='search'>
-<div class='search-wrapper' id='campus'>
-<select></select>
-<div class='spinner_box'>
-<div class='loader'></div>
-</div>
-</div>
 <label class='sr-only' for='term-select'>
 Select a Term
 </label>
 <div class='search-wrapper' id='term'>
 <select id='term-select'></select>
 </div>
+<label class='sr-only' for='faculty-select'>
+Select a faculty after choosing a term (optional)
+</label>
+<div class='search-wrapper' id='faculty'>
+<div class='spinner_box'>
+<div class='loader'></div>
+</div>
 <label class='sr-only' for='department-select'>
-Select a department after choosing a term
+Select a department after choosing a term or faculty
 </label>
 <div class='search-wrapper' id='department'>
 <div class='spinner_box'>
@@ -164,25 +148,18 @@ Select a section after choosing a course
 </div>
 </div>
 <div class='go-wrapper'>
-<a href='#' id='go'>
-<i class='icon-mail-forward'></i>
-Compare Prices on These Course Materials
-</a>
 </div>
 </div>
 </div>
 <script>
   $(document).ready(function(){
     var terms    = new Verba.Compare.Collections.Terms([{"id":"27","name":"FALL 2017","ordering":true,"inquiry":true,"code":null}]);
-    var campuses = new Verba.Compare.Collections.Campuses(
-      [{"id":"1006","name":"Brantford"},{"id":"1009","name":"Conestoga College"},{"id":"1007","name":"Kitchener"},{"id":"1010","name":"Mohawk"},{"id":"1008","name":"Nipissing"},{"id":"1005","name":"Online Learning"},{"id":"1004","name":"Toronto"},{"id":"1003","name":"Waterloo"},{"id":"1002","name":"WILFRID LAURIER UNIVERSITY"}],
       {
         terms: [{"id":"27","name":"FALL 2017","ordering":true,"inquiry":true,"code":null}]
       });
     var view     = new Verba.Compare.Views.CourseSelector({
       el: "body",
-      terms: terms,
-      campuses: campuses
+      terms: terms
     })
   });
 </script>
