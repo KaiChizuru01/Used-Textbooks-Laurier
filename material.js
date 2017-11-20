@@ -3997,6 +3997,9 @@ $(function(){
         if(!_rel) return $subcat.prop("disabled",true);
         $subcat.find("[rel="+_rel+"]").show();
         $subcat.prop("disabled",false);
+      if(!_rel) return $subcat2.prop("disabled",true);
+        $subcat2.find("[rel="+_rel+"]").show();
+        $subcat2.prop("disabled",false);
     });
     
 });
