@@ -15,7 +15,7 @@ if(empty($name)||empty($visitor_email))
   exit;
 }
 
-$to = "nguy2930@mylaurier.ca";//<== Put your email here
+
                        
 
 $email_from = 'nguy2930@mylaurier.ca';//<== Put your email here
@@ -24,9 +24,12 @@ $email_body = "You have received a new message from the user $name. \n".
   "email address: $visitor_email\n".
   "Here is the message:\n $message".
   
+$to = "nguy2930@mylaurier.ca";//<== Put your email here  
+$headers = "From: $email_from \r\n";
+$headers .= "Reply-To:$visitor_email \r\n";
+$headers .= "Cc: https://kaichizuru01.github.io/Used-Textbooks-Laurier/index.html \r\n";                     
+
   
-  $headers = "From: $email_from \r\n";
-  
-  //Send the email!
-  mail($to,$email_subject,$email_body,$headers);
-  //done. redirect to thank-you page.
+//Send the email!
+mail($to,$email_subject,$email_body,$headers);
+//done. redirect to thank-you page.
