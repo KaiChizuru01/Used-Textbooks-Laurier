@@ -50,6 +50,43 @@
       z-index: 900;
     }
     </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script language="javascript" type="text/javascript">
+            function dynamicdropdown(listindex)
+            {
+                document.getElementById("subcategory").length = 0;
+                switch (listindex)
+                {
+                    case "Php" :
+                        document.getElementById("subcategory").options[0]=new Option("Please select framework","");
+                        document.getElementById("subcategory").options[1]=new Option("Cakephp","Cakephp");
+                        document.getElementById("subcategory").options[2]=new Option("Wordpress","Wordpress");
+                        document.getElementById("subcategory").options[3]=new Option("Codeigniter","Codeigniter");
+                        document.getElementById("subcategory").options[4]=new Option("Joomla","Joomla");
+                        document.getElementById("subcategory").options[5]=new Option("Magento","Magento");
+                        break;
+                    
+                    case "Java" :
+                        document.getElementById("subcategory").options[0]=new Option("Please select framework","");
+                        document.getElementById("subcategory").options[1]=new Option("Strauts","Strauts");
+                        document.getElementById("subcategory").options[2]=new Option("Hibernate","Hibernate");
+                        break;
+                    case "Javascript" :
+                        document.getElementById("subcategory").options[0]=new Option("Please select framework","");
+                        document.getElementById("subcategory").options[1]=new Option("D-Jango","D-Jango");
+                        document.getElementById("subcategory").options[2]=new Option("Angular","Angular");
+                        document.getElementById("subcategory").options[3]=new Option("Prototype","Prototype");
+                        document.getElementById("subcategory").options[4]=new Option("jQuery","jQuery");
+                        document.getElementById("subcategory").options[5]=new Option("Backbone","Backbone");
+                        break;
+                    case "Dotnet" :
+                        document.getElementById("subcategory").options[0]=new Option("Please select framework","");
+                        document.getElementById("subcategory").options[1]=new Option("VbScript","VbScript");
+                        break;
+                }
+                return true;
+            }
+       </script>
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     
@@ -73,97 +110,26 @@
         </div>
       </header>
       <body>
-        <div id='search-structure'>
-          <!-- Allows render_partial to find both .mobile and .html templates -->
-<div class='compare index' id='content'>
-<div id='menu-flash'></div>
-<div id='menu'>
-<div class='menu-wrapper'>
-<div class='utk' id='standard-menu'>
-<div class='header' id='choose'>
-Login or Choose Courses
-<div class='arrow-box'>
-<div class='arrow'></div>
-</div>
-</div>
-</div>
-<div id='responsive-menu'>
-<div class='header' id='choose'>
-Login or Choose Courses
-<div class='arrow-box'>
-<div class='arrow'></div>
-</div>
-</div>
-<a class="responsive-menu-button highlight" href="#left-menu"><i class='icon-align-justify'></i>
-Course List
-</a><div class='clear'></div>
-</div>
-</div>
-</div>
-<label class='sr-only' for='term-select'>
-Select a Term
-</label>
-<div class='search-wrapper' id='term'>
-<select id='term-select'></select>
-</div>
-<label class='sr-only' for='faculty-select'>
-Select a faculty after choosing a term (optional)
-</label>
-<div class='search-wrapper' id='faculty'>
-<div class='spinner_box'>
-<div class='loader'></div>
-</div>
-<label class='sr-only' for='department-select'>
-Select a department after choosing a term or faculty
-</label>
-<div class='search-wrapper' id='department'>
-<div class='spinner_box'>
-<div class='loader'></div>
-</div>
-<select id='department-select'></select>
-</div>
-<label class='sr-only' for='course-select'>
-Select a course after choosing a department
-</label>
-<div class='search-wrapper' id='course'>
-<div class='spinner_box'>
-<div class='loader'></div>
-</div>
-<select id='course-select'></select>
-</div>
-<label class='sr-only' for='section-select'>
-Select a section after choosing a course
-</label>
-<div class='search-wrapper' id='eset'>
-<div class='spinner_box'>
-<div class='loader'></div>
-</div>
-<select id='section-select'></select>
-</div>
-</div>
-<div class='selected-wrapper'>
-<div class='selected-list'>
-<div class='none-selected'>No Courses Selected!</div>
-</div>
-</div>
-</div>
-<div class='go-wrapper'>
-</div>
-</div>
-</div>
-<script>
-  $(document).ready(function(){
-    var terms    = new Verba.Compare.Collections.Terms([{"id":"27","name":"FALL 2017","ordering":true,"inquiry":true,"code":null}]);
-      {
-        terms: [{"id":"27","name":"FALL 2017","ordering":true,"inquiry":true,"code":null}]
-      });
-    var view     = new Verba.Compare.Views.CourseSelector({
-      el: "body",
-      terms: terms
-    })
-  });
-</script>
-      </body>
+        <div class="category_div" id="category_div">Please specify language:
+            <select name="category" class="required-entry" id="category" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+                <option value="">Select Language</option>
+                <option value="Php">Php</option>
+                <option value="Java">Java</option>
+                <option value="Javascript">Javascript</option>
+                <option value="Dotnet">Dotnet</option>
+            </select>
+        </div>
+        <div class="sub_category_div" id="sub_category_div">Please select framework:
+            <script type="text/javascript" language="JavaScript">
+                document.write('<select name="subcategory" id="subcategory"><option value="">Please select framework</option></select>')
+            </script>
+            <noscript>
+                <select name="subcategory" id="subcategory" >
+                    <option value="">Please select framework</option>
+                </select>
+            </noscript>
+        </div>
+    </body>
           
         <footer class="mdl-mega-footer">
           <div class="mdl-mega-footer--middle-section">
