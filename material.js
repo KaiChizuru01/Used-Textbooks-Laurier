@@ -3986,8 +3986,9 @@ componentHandler.register({
 });
 $(function(){
     
-    var $cat = $("#department"),
-        $subcat = $("#courses");
+    var $cat = $("#term"),
+        $subcat = $("#department");
+        $subcat = $(#courses);
     
     $cat.on("change",function(){
         var _rel = $(this).val();
