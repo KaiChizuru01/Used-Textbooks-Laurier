@@ -3984,22 +3984,3 @@ componentHandler.register({
             }, 'json');
         });
 });
-$(function(){
-    
-    var $cat = $("#term"),
-        $subcat = $("#faculty");
-        $subcat2 = $("#department");
-    
-    $cat.on("change",function(){
-        var _rel = $(this).val();
-        $subcat.find("option").attr("style","");
-        $subcat.val("");
-        if(!_rel) return $subcat.prop("disabled",true);
-        $subcat.find("[rel="+_rel+"]").show();
-        $subcat.prop("disabled",false);
-      if(!_rel) return $subcat2.prop("disabled",true);
-        $subcat2.find("[rel="+_rel+"]").show();
-        $subcat2.prop("disabled",false);
-    });
-    
-});
