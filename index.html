@@ -69,7 +69,23 @@
         </nav>
       </header>
       <body>
-	<script src="material.js"></script>
+	<script> $(function(){
+    
+    var $cat = $("#term"),
+        $subcat = $("#department");
+	$subcat = $("#courses");
+    
+    $cat.on("change",function(){
+        var _rel = $(this).val();
+        $subcat.find("option").attr("style","");
+        $subcat.val("");
+        if(!_rel) return $subcat.prop("disabled",true);
+        $subcat.find("[rel="+_rel+"]").show();
+        $subcat.prop("disabled",false);
+    });
+    
+});
+	      </script>
 	<div class="container">
 	  <form action="/action_page.php" method="post" target="_blank">
 	    <div class="row">
