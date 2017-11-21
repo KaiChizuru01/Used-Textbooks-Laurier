@@ -9750,3 +9750,17 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     .mdl-cell--12-col-desktop.mdl-cell--12-col-desktop {
       width: 100%; } }
 #success_message{ display: none;}
+
+#departement option{
+   display:none;
+}
+#department option.label{
+   display:block;
+}
+
+#courses option{
+   display:none;
+}
+#courses option.label{
+   display:block;
+}
